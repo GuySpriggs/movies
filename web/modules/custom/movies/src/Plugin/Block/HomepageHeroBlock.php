@@ -70,14 +70,13 @@ class HomepageHeroBlock extends BlockBase {
    */
   public function build() {
     // Sets the values from the block form.
-    $image = $this->configuration['image'] ? : $this->defaultConfiguration()['image'];
-
+    $image = $this->configuration['image'] ? : NULL;
     if ($image) {
       $file = File::load((int) $image[0]);
       $url = $file->createFileUrl();
     }
     else {
-      $url = drupal_get_path('module', 'movies') . '/images/dog.jpeg';
+      $url = \Drupal::service('extension.list.module')->getPath('movies') . '/images/dog.jpeg';
     }
     $heading = $this->configuration['heading'] ? : $this->defaultConfiguration()['heading'];
     $body = $this->configuration['body'] ? : $this->defaultConfiguration()['body'];
