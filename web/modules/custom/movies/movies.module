@@ -27,7 +27,6 @@ function create_movies($movies, &$context) : void{
   $message = 'Adding movies ...';
   $results = array();
   $importMovieService = \Drupal::service('movies.create.movies');
-//  dd($movies);
   foreach ($movies as $movie) {
     $importMovieService->processMovie($movie);
     $results[] = $movie['Title'];
