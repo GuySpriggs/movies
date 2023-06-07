@@ -1,0 +1,23 @@
+uuid: 9514ecb1-8176-45cd-ba78-146a5b35ef0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.movie
+  module:
+    - text
+id: node.movie.body
+field_name: body
+entity_type: node
+bundle: movie
+label: Plot
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

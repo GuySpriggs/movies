@@ -1,0 +1,30 @@
+uuid: 085a27e6-65cc-4470-9b05-659487ed0aa6
+langcode: en
+status: true
+dependencies:
+  module:
+    - movies
+    - system
+  theme:
+    - movies_theme
+id: homepageheroblock_2
+theme: movies_theme
+region: content
+weight: -6
+provider: null
+plugin: movies_homepage_hero_block
+settings:
+  id: movies_homepage_hero_block
+  label: 'Homepage Hero Block'
+  label_display: '0'
+  provider: movies
+  foo: 'Hello world!'
+  heading: 'Welcome to movies!'
+  body: 'This is a super cool movies website!'
+  image:
+    - '33'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

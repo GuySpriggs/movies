@@ -1,0 +1,11 @@
+uuid: 07b471d6-d5d7-494b-9046-2da6cbbea545
+langcode: en
+status: true
+dependencies: {  }
+name: Movie
+type: movie
+description: 'Used to create movies on the website.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

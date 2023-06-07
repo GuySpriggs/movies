@@ -40,6 +40,7 @@ class ApiSettingsForm extends ConfigFormBase {
       '#title' => $this->t('Search Term'),
       '#default_value' => $this->config('movies.settings')->get('search'),
       '#required' => TRUE,
+      '#placeholder' => 'Dog',
     ];
 
     $form['year'] = [
@@ -47,6 +48,7 @@ class ApiSettingsForm extends ConfigFormBase {
       '#title' => $this->t('Year'),
       '#default_value' => $this->config('movies.settings')->get('year'),
       '#required' => TRUE,
+      '#placeholder' => '2018',
     ];
 
     return parent::buildForm($form, $form_state);

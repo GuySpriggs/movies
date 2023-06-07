@@ -1,0 +1,22 @@
+uuid: 42df2de7-4615-44c0-91f3-8501067cec76
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - movies_theme
+_core:
+  default_config_hash: cBMF1Yr7bqVVP-72Z0F4GxUPfomi9E1IU-NU_uec1ME
+id: movies_theme_powered
+theme: movies_theme
+region: sidebar_first
+weight: -7
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,29 @@
+uuid: 12b88abc-4332-4b2a-970b-53e000d00625
+langcode: en
+status: false
+dependencies:
+  module:
+    - movies
+    - system
+  theme:
+    - movies_theme
+id: movies_theme_homepageheroblock
+theme: movies_theme
+region: sidebar_first
+weight: 0
+provider: null
+plugin: movies_homepage_hero_block
+settings:
+  id: movies_homepage_hero_block
+  label: 'Homepage Hero Block'
+  label_display: visible
+  provider: movies
+  foo: 'Hello world!'
+  heading: 'This is the hero block'
+  body: 'This is why the hero block is so AWESOME!'
+  image: '1'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
