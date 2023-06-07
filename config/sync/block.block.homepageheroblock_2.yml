@@ -18,11 +18,10 @@ settings:
   label: 'Homepage Hero Block'
   label_display: '0'
   provider: movies
-  foo: 'Hello world!'
   heading: 'Welcome to movies!'
   body: 'This is a super cool movies website!'
-  image:
-    - '33'
+  image: {  }
+  foo: 'Hello world!'
 visibility:
   request_path:
     id: request_path
