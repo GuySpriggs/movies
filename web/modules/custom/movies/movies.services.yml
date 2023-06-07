@@ -1,0 +1,16 @@
+services:
+  # Movie import service.
+  movies.import.movies:
+    class: Drupal\movies\Service\ImportMovieService
+    arguments:
+      - '@logger.channel.default'
+      - '@config.factory'
+      - '@http_client'
+      - '@movies.create.movies'
+  # Movies creation service.
+  movies.create.movies:
+    class: Drupal\movies\Service\CreateMovieService
+    arguments:
+      - '@logger.channel.default'
+      - '@entity_type.manager'
+      - '@config.factory'

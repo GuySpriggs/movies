@@ -1,0 +1,11 @@
+name: Movies Theme
+type: theme
+description: A custom theme for movies site.
+core: 8.x
+core_version_requirement: ^8 || ^9 || ^10
+package: Custom
+base theme: bootstrap
+
+libraries-extend:
+  bootstrap/framework:
+    - movies_theme/framework

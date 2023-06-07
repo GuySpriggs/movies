@@ -1,0 +1,7 @@
+# Adds a link to the admin menu under the Configuration > System > Api Settings
+movies.api_settings:
+  title: Api settings
+  description: A link for configuring the API
+  parent: system.admin_config_system
+  route_name: movies.api_settings
+  weight: 10

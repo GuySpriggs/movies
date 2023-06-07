@@ -1,0 +1,179 @@
+// Style the hero block
+.block-movies-homepage-hero-block {
+  .hero-container {
+    color: red;
+    position: relative;
+    z-index: 0;
+    &:after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      display: block;
+      background-color: #002448;
+      position: relative;
+      opacity: 1.65;
+      top: 0;
+      z-index: -1;
+    }
+  }
+  .hero-image {
+    img {
+      width: 100%;
+      height: 450px;
+      position: relative;
+    }
+  }
+  .hero-text {
+    position: absolute;
+    top: 30%;
+    left: 4%;
+    .hero-heading {
+      margin: 0 0 10px 0;
+      color: #fff;
+      line-height: 1.3em;
+      font-weight: 500;
+      text-shadow: 0 1px 10px #111;
+      h1 {
+        font-size: 8rem;
+      }
+    }
+    .hero-body {
+      font-weight: 400;
+      line-height: 1.5em;
+      margin-bottom: 25px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      font-size: 2rem;
+      color: white;
+      text-shadow: 0 1px 10px #111;
+    }
+  }
+}
+
+*{
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !important;
+}
+
+// Style the node teaser
+.movie_teaser_node {
+  .movie_container {
+    width: 100%;
+    max-width: 250px;
+    max-height: 350px;
+    position: relative;
+    margin-bottom: 10px;
+    .movie_poster {
+      img {
+        width: 250px;
+        height: 350px;
+        max-width: 250px;
+        max-height: 350px;
+      }
+
+    }
+    .movie_title {
+      position: absolute;
+      color: white;
+      top: 13%;
+      right: 8%;
+      font-weight: 900;
+      opacity: 0;
+      z-index: 2;
+      font-size: 4rem;
+      padding: 10%;
+      text-align: center;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .movie_year {
+      z-index: 9999;
+      position: absolute;
+      top: 3%;
+      right: 3%;
+      padding: 1%;
+      background-color: #fff;
+      border-radius: 10px;
+      font-weight: 900;
+    }
+    &:hover {
+      .movie_poster:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-color: black;
+        position: absolute;
+        opacity: .5;
+        top: 0;
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
+        z-index: 1;
+        text-shadow: 0 1px 10px #111;
+      }
+      .movie_title {
+        opacity: 1;
+      }
+    }
+  }
+  .movie_content {
+    color: white;
+    width: 250px;
+  }
+}
+
+// Style the filter
+.view-frontpage{
+  .view-empty{
+    color: white;
+    text-align: center;
+  }
+  .form-inline.clearfix{
+    flex-wrap: wrap;
+    display: flex;
+    font-size: 2rem;
+    border-radius: 20px;
+    justify-content: center;
+    position: relative;
+    margin-top: 10px;
+    padding: 10px;
+    color: #fff;
+    width: 100%;
+  }
+  .form-item {
+    background: #212529;
+    padding: 15px;
+    &::placeholder{
+      opacity: 1; /* Firefox */
+      color: white;
+    }
+    .form-select{
+      color: white;
+    }
+    .form-text {
+      color: white;
+    }
+  }
+  .form-actions {
+    background: #212529;
+    padding: 15px;
+    button {
+      border: 1px solid black;
+      background-color: white;
+      color: black;
+      width: 100%;
+      &:hover {
+        background-color: black;
+        color: white;
+      }
+    }
+  }
+  .select-wrapper:after{
+    display: none;
+  }
+  .control-label{
+    margin-right: 2px;
+  }
+}

@@ -1,0 +1,28 @@
+# Schema for the configuration files of the Movies module.
+block.settings.movies_homepage_hero_block:
+  type: block_settings
+  label: 'Homepage Hero Block block'
+  mapping:
+    heading:
+      type: string
+      label: 'Heading'
+    body:
+      type: string
+      label: 'Body'
+    image:
+      type: string
+      label: 'Image'
+
+movies.settings:
+  type: config_object
+  label: 'Movies settings'
+  mapping:
+    apikey:
+      type: string
+      label: 'Api Key'
+    search:
+      type: string
+      label: "Search"
+    year:
+      type: string
+      label: "Year"

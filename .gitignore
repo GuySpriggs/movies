@@ -60,3 +60,7 @@
 /drush
 /drupal.phar
 /drupal
+
+/web/modules/contrib
+/web/themes/contrib
+/web/themes/custom/movies_theme/node_modules

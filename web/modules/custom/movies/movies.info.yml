@@ -1,0 +1,7 @@
+name: Movies
+type: module
+description: Used to pull movie data from the Omdbapi and create movies on the site.
+core: 8.x
+core_version_requirement: ^8 || ^9 || ^10
+package: Custom
+

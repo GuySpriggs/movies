@@ -1,0 +1,59 @@
+<?php
+
+/**
+ * Creates a theme for the Homepage Hero Block to pass the variables into the template.
+ * @return array
+ */
+function movies_theme(): array
+{
+  return [
+    'homepage_hero_block' => [
+      'variables' => [
+        'heading' => '',
+        'body' => '',
+        'image' => '',
+      ],
+    ]
+  ];
+}
+
+/**
+ * Batch processing callback to create movies.
+ * @param $movies
+ * @param $context
+ * @return void
+ */
+function create_movies($movies, &$context) : void{
+  $message = 'Adding movies ...';
+  $results = array();
+  $importMovieService = \Drupal::service('movies.create.movies');
+//  dd($movies);
+  foreach ($movies as $movie) {
+    $importMovieService->processMovie($movie);
+    $results[] = $movie['Title'];
+  }
+  $context['message'] = $message;
+  $context['results'] = $results;
+}
+
+/**
+ * Batch processing callback when movies have been created.
+ * @param $success
+ * @param $results
+ * @param $operations
+ * @return void
+ */
+function create_movies_finished($success, $results, $operations) {
+  // The 'success' parameter means no fatal PHP errors were detected. All
+  // other error management should be handled using 'results'.
+  if ($success) {
+    $message = \Drupal::translation()->formatPlural(
+      count($results),
+      'One movie processed.', '@count movies processed.'
+    );
+  }
+  else {
+    $message = t('Finished with an error.');
+  }
+  \Drupal::messenger()->addStatus($message);
+}
